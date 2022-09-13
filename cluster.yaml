@@ -1,0 +1,56 @@
+__default__:
+  account: cuba
+  gres: "localtmp:150G"
+  nodes: 1
+  partition: batch
+
+merge_vcfs:
+  gres: ""
+
+haplotype_caller_gvcf:
+  partition: batch
+
+combine_gvcf_parts:
+  partition: batch
+
+genotype_gvcf_parts:
+  partition: batch
+
+merge_vcfs:
+  partition: batch
+
+select_variants:
+  partition: batch
+
+mosdepth:
+  partition: batch
+
+collect_hs_metrics:
+  partition: batch
+
+variant_stats_all:
+  partition: batch
+
+variant_eval:
+  partition: batch
+  
+peddy:
+  partition: batch
+  
+collect_insertsize_metrics:
+  partition: batch
+  
+relatedness2:
+  partition: batch
+
+bwa_map:
+  gres: "localtmp:150G"
+
+ngs_cli_download:
+  gres: "localtmp:150G"
+
+mark_duplicates:
+  gres: "localtmp:150G"
+
+apply_bqsr:
+  gres: "localtmp:150G"
