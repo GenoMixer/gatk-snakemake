@@ -1,0 +1,34 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+description: 'textual sample sheet entries'
+
+properties:
+  family_id:
+    type: string
+  sample_id:
+    type: string
+  father_id:
+    type: string
+  mother_id:
+    type: string
+  sex:
+    type: string
+    enum: [ 'M', 'F', '.' ]
+  is_affected:
+    type: integer
+    enum: [ 0, 1, 2 ]
+  remote:
+    type: string
+    enum: [ 's3', 'ngs-cli', '.' ]
+    description: 
+  fastq1:
+    type: string
+    description: path to fastq file
+  fastq2:
+    type: string
+    description: path to second fastq file (for paired end reads)
+
+required:
+  - family_id
+  - sample_id
+  - fastq1
