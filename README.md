@@ -9,7 +9,7 @@ This snakemake pipeline for variant calling of whole-exome (WES) or whole-genome
 1. Clone the repository:
 
     ```bash
-    git clone https://git.meb.uni-bonn.de/workflows/gatk_snakemake.git
+    git clone https://github.com/GenoMixer/gatk-snakemake.git
     ```
 
 2. Create a directory e.g. "input" to save the raw fastq files:
