@@ -1,7 +1,3 @@
-## Pipeline Version
-v1.0.0
-
-
 ## General Description
 
 This snakemake pipeline for variant calling of whole-exome (WES) or whole-genome (WGS) sequencing data follows basic gatk best practice recommendations. In principal the data is mapped to the decoy reference genome (GRCh37) and variant calling is performed on the core refseq targets from Twist (mainly used in Bonn) using a interval padding of +/-100bp in case of WES or against the complete genome in case of WGS data. Different configurations regarding the target regions and interval padding are possible by modifying the config.yml. Sophisticated QC is carried out on multiple levels of the data such as fastq, bam and vcfs. Variant annotation is carried out using vep. For variant filtering custom scripts, population-wide AF and inhouse variant databases are applied. For the Excel-based analysis, tsv files are generated, and for the web-based analysis, all project-specific vcfs are uploaded into Varfish.
