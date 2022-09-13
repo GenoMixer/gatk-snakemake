@@ -1,0 +1,5 @@
+sample_id	type	path
+DUMMY	raw-reads	/ceph01/projects/Exomes/DUMMY_1.fq.gz
+DUMMY	raw-reads	/ceph01/projects/Exomes/DUMMY_2.fq.gz
+
+
