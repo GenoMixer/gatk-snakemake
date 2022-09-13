@@ -1,4 +1,2 @@
-family_id	sample_id	father_id	mother_id	sex	is_affected
-PED	DUMMY	0	0	F	2
-
-
+family_id	sample_id	father_id	mother_id	sex	is_affected	remote	fastq1	fastq2
+PED_DUMMY	ID_DUMMY	0	0	F	2	.	/ceph01/projects/Exomes/Flowcell/DUMMY_ID_1.fq.gz	/ceph01/projects/Exomes/Flowcell/DUMMY_ID_1.fq.gz
