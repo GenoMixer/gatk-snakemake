@@ -1,0 +1,60 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+description: snakemake configuration file reference
+
+type: object
+
+properties:
+  sample-sheet:
+    type: string
+  project:
+    type: string
+    description: Project name. Must be present on remotes.
+  remote:
+    type: object
+    properties:
+      location:
+        type: string
+        enum: [ 's3', 'ngs-cli' ]
+      bucket:
+        type: string
+        description: Bucket to search, if location is aws
+  bins:
+    type: integer
+    description: Number of bins to split bams into for variant calling
+    minimum: 1
+    maximum: 20
+  ref:
+    type: object
+    properties:
+      genome:
+        type: string
+      dbsnp:
+        type: string
+      known-variants:
+        type: array
+        items:
+          type: string
+      1kg-variants:
+          type: string
+      bait-region:
+        type: string
+      target-region:
+        type: string
+    required:
+      - genome
+      - known-variants
+  output-extensions:
+    type: object
+    properties:
+      single:
+        type: array
+        items:
+          type: string
+      family:
+        type: array
+        items:
+          type: string
+      required:
+        - single
+        - family
